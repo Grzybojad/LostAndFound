@@ -36,13 +36,13 @@ public class KeepStraight : MonoBehaviour
         
         if( angle > targetAngle + deadzone )
         {
-            rb.AddTorque( 0, 0, -torqueToAdd * Time.fixedDeltaTime );
+            rb.AddTorque( 0, 0, -torqueToAdd * Time.fixedDeltaTime, ForceMode.Acceleration );
         }
         else if( angle < targetAngle - deadzone )
         {
-            rb.AddTorque( 0, 0, torqueToAdd * Time.fixedDeltaTime );
+            rb.AddTorque( 0, 0, torqueToAdd * Time.fixedDeltaTime, ForceMode.Acceleration );
         }
 
-        rb.angularVelocity *= .9f;
+        rb.angularVelocity *= .99f;
     }
 }

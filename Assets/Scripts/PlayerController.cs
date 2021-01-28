@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
 	Vector3 moveDir;
 
 	[SerializeField] float moveForce = 1000;
-
+	[SerializeField] float counterweightForce = 100;
+	
 	public Vector3 flightDir;
 	
 	void Start()
@@ -32,7 +33,11 @@ public class PlayerController : MonoBehaviour
 
 	void MoveRb()
 	{
-		rb.AddForce( moveDir * (moveForce * Time.fixedDeltaTime) );
+		rb.AddForce( Vector3.up * (counterweightForce * Time.fixedDeltaTime), ForceMode.Acceleration );
+		
+		rb.AddForce( moveDir * (moveForce * Time.fixedDeltaTime), ForceMode.Acceleration );
+
+		rb.velocity *= 0.999f;
 	}
 
 	public void OnMove( InputValue value )
@@ -42,6 +47,13 @@ public class PlayerController : MonoBehaviour
 		flightDir = inputDir;
 		
 		moveDir = inputDir;
-		
+	}
+
+	void OnCollisionEnter( Collision other )
+	{
+		if( other.gameObject.CompareTag( "Chain" ) )
+		{
+			Physics.IgnoreCollision( other.gameObject.GetComponent<Collider>(), GetComponent<Collider>() );
+		}
 	}
 }
