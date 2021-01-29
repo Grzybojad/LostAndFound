@@ -396,8 +396,8 @@ Rigidbody:
   m_GameObject: {fileID: 3892521951170853122}
   serializedVersion: 2
   m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -426,7 +426,7 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
     min: -45
     max: 45
@@ -488,6 +488,7 @@ MonoBehaviour:
   rb: {fileID: 4030464528858486442}
   moveForce: 5000
   counterweightForce: 75
+  slowMultiplier: 0.5
   flightDir: {x: 0, y: 0, z: 0}
 --- !u!114 &4030464527140033572
 MonoBehaviour:
@@ -562,6 +563,7 @@ GameObject:
   - component: {fileID: 4030464528858486442}
   - component: {fileID: 4030464528858486443}
   - component: {fileID: 4030464528858486445}
+  - component: {fileID: 8045863061513982818}
   m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
@@ -630,6 +632,20 @@ MonoBehaviour:
   minCorrectionForce: 6000
   maxCorrectionForce: 30000
   deadzone: 0.1
+--- !u!114 &8045863061513982818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030464528858486441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189f88281430e6d479b2582ec23219f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftLights: {fileID: 0}
+  rightLights: {fileID: 0}
 --- !u!1 &5314917450465987087
 GameObject:
   m_ObjectHideFlags: 0
