@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
 
 	[SerializeField] float moveForce = 1000;
 	[SerializeField] float counterweightForce = 100;
+	[SerializeField] float slowMultiplier = 0.5f;
 	
 	public Vector3 flightDir;
+	bool slowActive;
 	
 	void Start()
 	{
@@ -35,7 +37,9 @@ public class PlayerController : MonoBehaviour
 	{
 		rb.AddForce( Vector3.up * (counterweightForce * Time.fixedDeltaTime), ForceMode.Acceleration );
 		
-		rb.AddForce( moveDir * (moveForce * Time.fixedDeltaTime), ForceMode.Acceleration );
+		
+		float movementForce = slowActive ? moveForce * slowMultiplier : moveForce;
+		rb.AddForce( moveDir * (movementForce * Time.fixedDeltaTime), ForceMode.Acceleration );
 
 		rb.velocity *= 0.999f;
 	}
@@ -47,6 +51,11 @@ public class PlayerController : MonoBehaviour
 		flightDir = inputDir;
 		
 		moveDir = inputDir;
+	}
+
+	public void OnSlow( InputValue value )
+	{
+		slowActive = value.Get<float>() > 0.5f;
 	}
 
 	void OnCollisionEnter( Collision other )
