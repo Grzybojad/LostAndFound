@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: df5a012e68bfbd646ad981ca5581095b
+guid: bd37a582130600d4999c50ebd9881c6e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: drone light
-    second: {fileID: 2100000, guid: 889ee6124730ac04b9457b6fcedf0cae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dronemainbody
-    second: {fileID: 2100000, guid: 2df8e216dbb9f0d4f967754b02e6e79f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lights left
-    second: {fileID: 2100000, guid: 5054160e619d91d4fb41c48bd746211d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lights right
-    second: {fileID: 2100000, guid: 85a7cd133da4aff4ea1a457a3f8a5e1f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metal
-    second: {fileID: 2100000, guid: 7536770cb2478324f95f757d56cb879a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

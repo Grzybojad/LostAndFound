@@ -724,11 +724,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656062305}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &710965007 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8292501096270306018, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-  m_PrefabInstance: {fileID: 4030464528734915385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714871915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,17 +1665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1391301863 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4030464527140033571, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-  m_PrefabInstance: {fileID: 4030464528734915385}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9969922921ac9dc47a0460c8ed25aa2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1544454190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,6 +2545,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 4.4198003
       objectReference: {fileID: 0}
+    - target: {fileID: 1937811219499244506, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7536770cb2478324f95f757d56cb879a, type: 2}
     - target: {fileID: 2135606263280519224, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
       propertyPath: m_Drag
       value: 1
@@ -2577,13 +2565,17 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3999966562412401641, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.32399893
+      objectReference: {fileID: 0}
     - target: {fileID: 4030464527140033568, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4030464527140033571, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
       propertyPath: counterweightForce
-      value: 49
+      value: 49.1
       objectReference: {fileID: 0}
     - target: {fileID: 4030464527140033573, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
       propertyPath: m_RootOrder
@@ -2649,22 +2641,6 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 8045863061513982818, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-      propertyPath: rend
-      value: 
-      objectReference: {fileID: 710965007}
-    - target: {fileID: 8045863061513982818, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-      propertyPath: leftLights
-      value: 
-      objectReference: {fileID: 2100000, guid: 3b7eedb18ae0cc24789d165cbadc64a7, type: 2}
-    - target: {fileID: 8045863061513982818, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-      propertyPath: rightLights
-      value: 
-      objectReference: {fileID: 2100000, guid: 76dffd69078154d4086fdfba40a5e2e4, type: 2}
-    - target: {fileID: 8045863061513982818, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 1391301863}
     - target: {fileID: 8292501096270306018, guid: 75869e92306f57c40a1f3531145d98ac, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
