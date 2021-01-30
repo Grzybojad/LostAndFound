@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4221628419905165418}
   - component: {fileID: 3230458308051171870}
   - component: {fileID: 387048566532781188}
-  - component: {fileID: 5274289170301878245}
+  - component: {fileID: 3433068655614479438}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4221628419905165418
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5274289170301878245
-CapsuleCollider:
+--- !u!65 &3433068655614479438
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,9 +93,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.010005816
-  m_Height: 0.024198584
-  m_Direction: 2
+  serializedVersion: 2
+  m_Size: {x: 0.020410439, y: 0.020052249, z: 0.024198592}
   m_Center: {x: 0, y: 0, z: 0.0020992926}
 --- !u!1 &7669033086191812362
 GameObject:
@@ -111,7 +110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7000335830470256048
 Transform:
