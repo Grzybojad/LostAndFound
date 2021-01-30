@@ -34,6 +34,6 @@ Material:
     m_Floats:
     - _EmissionStrength: 1
     m_Colors:
-    - Color_6148daf391a54425a15af84f899a8d83: {r: 0.0810963, g: 0.2082169, b: 2.5283017, a: 1}
+    - Color_6148daf391a54425a15af84f899a8d83: {r: 0.18532053, g: 0.4235898, b: 5.056603, a: 1}
     - Color_d41fd2e22b7441fda13a5a31329ad7e2: {r: 0.90588236, g: 0.90588236, b: 0.90588236, a: 1}
   m_BuildTextureStacks: []
