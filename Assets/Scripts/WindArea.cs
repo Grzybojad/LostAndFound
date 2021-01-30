@@ -52,6 +52,5 @@ public class WindArea : MonoBehaviour
         if( collidersInArea.ContainsValue( rbId ) || !rigidbodiesInArea.ContainsKey( rbId ) ) return;
 
         rigidbodiesInArea.Remove( rbId );
-        Debug.Log( $"Removed rb {rbId}" );
     }
 }
