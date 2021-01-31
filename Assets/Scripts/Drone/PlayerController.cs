@@ -10,21 +10,22 @@ public class PlayerController : MonoBehaviour
 
 	Vector3 moveDir;
 
+	[Header( "Faces" )]
+	[SerializeField] AnimatingMaterial animatingFace;
+	[SerializeField] Texture winFace;
+	[SerializeField] Texture loseFace;
+	
+	[Header("Options")]
 	[SerializeField] float moveForce = 1000;
 	[SerializeField] float counterweightForce = 100;
 	[SerializeField] float slowMultiplier = 0.5f;
 	
-	public Vector3 flightDir;
+	[HideInInspector] public Vector3 flightDir;
 	bool slowActive;
-	
+
 	void Start()
 	{
-		
-	}
-	
-	void Update()
-	{
-		// moveDir *= 0.9f;
+		animatingFace.enabled = false;
 	}
 
 	void FixedUpdate()
@@ -64,5 +65,15 @@ public class PlayerController : MonoBehaviour
 		{
 			Physics.IgnoreCollision( other.gameObject.GetComponent<Collider>(), GetComponent<Collider>() );
 		}
+	}
+
+	public void OnWin()
+	{
+		animatingFace.SetTexture( winFace );
+	}
+	
+	public void OnLose()
+	{
+		animatingFace.SetTexture( loseFace );
 	}
 }
